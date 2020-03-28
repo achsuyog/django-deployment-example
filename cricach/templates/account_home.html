@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accounts</title>
+</head>
+<body>
+    <h1><center>
+        welcome to the account page of project. where you will register and login
+    </center></h1>
+    <center>
+    <form action='register' method="POST">
+        {% csrf_token %}
+        <input type="text" placeholder="First name" name="first_name"><br>
+        <input type="text" placeholder="Last name" name="last_name"><br>
+        <input type="text" placeholder="username" name="username"><br>
+        <input type="email " placeholder="email" name="email"><br>
+        <input type="password"  name="password1"><br>
+        <input type="password"  name="password2"><br>
+        
+        <input type="submit">
+    </form>
+    {%for message in messages%}
+    <h1><center>{{message}}</center></h1>
+    {%endfor   %}
+</center>
+</body>
+</html>
